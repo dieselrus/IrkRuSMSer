@@ -455,6 +455,7 @@ public class MainActivity extends Activity {
 	   	}
 	   	
 	   	pd.dismiss();
+	   	setError("");
 	   	imgCaptcha.setImageBitmap(img);	
 	}
 	
@@ -470,13 +471,13 @@ public class MainActivity extends Activity {
 			//matchtoken = matcher.group(1); 
 			imgStatus.setVisibility(View.VISIBLE);
 			//Log.v("matcher", matchtoken);
-			txtError.setText("Сообщение доставлено на сервер.");
+			setError("Сообщение доставлено на сервер.");
 		} 
 		else
 		{
-			txtError.setText("Возможно сообщение не доставлено на сервер.");
+			setError("Возможно сообщение не доставлено на сервер.");
 //			imgStatus.setImageDrawable(getResources().getDrawable(R.drawable.error));
-			imgStatus.setVisibility(View.VISIBLE);
+//			imgStatus.setVisibility(View.VISIBLE);
 		}
 		
     	txtCaptcha1.setText("");
