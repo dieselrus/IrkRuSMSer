@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/BackColor"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/admobLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/admobLayout"
+        android:text="@string/PhoneNumber"
+        android:textColor="@color/textColor"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/editPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_toLeftOf="@+id/btnFContacts"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/btnContacts"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/editPhoneNumber"
+        android:background="@drawable/btn_contacts_background" />
+
+    <Button
+        android:id="@+id/btnFContacts"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignTop="@+id/editPhoneNumber"
+        android:layout_toLeftOf="@+id/btnContacts"
+        android:background="@drawable/btn_fcontacts_background"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editPhoneNumber"
+        android:text="@string/MessageText"
+        android:textColor="@color/textColor"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/editMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/editPhoneNumber"
+        android:layout_below="@+id/textView2"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:maxLength="200" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignTop="@+id/editMessage"
+        android:layout_toRightOf="@+id/btnFContacts"
+        android:background="@drawable/btn_send_background" />
+
+    <Button
+        android:id="@+id/btnClean"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignBaseline="@+id/btnSend"
+        android:layout_alignBottom="@+id/btnSend"
+        android:layout_toRightOf="@+id/editPhoneNumber"
+        android:background="@drawable/btn_crear_background" />
+
+    <ImageView
+        android:id="@+id/imageCaptcha1"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editMessage"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_launcher" 
+        android:contentDescription="@string/descr"/>
+
+    <EditText
+        android:id="@+id/editCaptcha1"
+        android:layout_width="87dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageCaptcha1"
+        android:layout_below="@+id/editMessage"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/imageCaptcha1"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/imageCaptcha1"
+        android:textColor="@color/textColor" />
+
+    <ImageView
+        android:id="@+id/imageStatus"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignTop="@+id/editCaptcha1"
+        android:layout_toRightOf="@+id/editCaptcha1"
+        android:layout_below="@+id/editMessage"
+        android:src="@drawable/success"
+        android:visibility="invisible" 
+        android:contentDescription="@string/descr"/>
+
+    <Button
+        android:id="@+id/sendFriend"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textError"
+        android:textColor="@color/textColor"
+        android:text="@string/send_friends" />
+	
+</RelativeLayout>
