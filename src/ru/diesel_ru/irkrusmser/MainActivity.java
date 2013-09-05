@@ -22,7 +22,6 @@ import android.provider.ContactsContract;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -81,11 +80,11 @@ public class MainActivity extends Activity {
 	    ConnectivityManager cm = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
 	    NetworkInfo nInfo = cm.getActiveNetworkInfo();
 	    if (nInfo != null && nInfo.isConnected()) {
-	        Log.i(LOG_TAG, "ONLINE");
+//	        Log.i(LOG_TAG, "ONLINE");
 	        return true;
 	    }
 	    else {
-	        Log.i(LOG_TAG, "OFFLINE");
+//	        Log.i(LOG_TAG, "OFFLINE");
 	        return false;
 	    }
 	}
